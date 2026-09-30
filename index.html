@@ -399,6 +399,25 @@
   .footer-right a:hover { color: var(--red); }
   .footer-right a svg { width: 14px; height: 14px; }
 
+
+  /* NAV MENU */
+  .nav-center { display: none; align-items: center; gap: 1.5rem; }
+  @media(min-width:900px){ .nav-center { display: flex; } }
+  .nav-dropdown { position: relative; }
+  .nav-link-btn { background: none; border: none; color: #fff; font-weight: 700; font-size: .9rem; cursor: pointer; display: flex; align-items: center; gap: .3rem; padding: .4rem .6rem; border-radius: .5rem; transition: color .2s; }
+  .nav-link-btn:hover { color: var(--red-light); }
+  .nav-link-btn svg { stroke: currentColor; fill: none; }
+  .nav-dropdown-content { position: absolute; top: calc(100% + .5rem); left: 50%; transform: translateX(-50%); background: #111; border: 1px solid rgba(229,62,62,.25); border-radius: 1rem; padding: .5rem; min-width: 220px; display: none; flex-direction: column; gap: .15rem; box-shadow: 0 20px 50px rgba(0,0,0,.6); z-index: 200; }
+  .nav-dropdown:hover .nav-dropdown-content { display: flex; }
+  .nav-dropdown-content a { color: #e2e8f0; text-decoration: none; padding: .55rem 1rem; border-radius: .6rem; font-size: .88rem; font-weight: 600; transition: background .2s, color .2s; }
+  .nav-dropdown-content a:hover { background: rgba(229,62,62,.15); color: #fff; }
+  .nav-hamburger { display: flex; background: none; border: 1px solid rgba(255,255,255,.15); border-radius: .5rem; padding: .35rem .45rem; cursor: pointer; color: #fff; }
+  @media(min-width:900px){ .nav-hamburger { display: none; } }
+  .mobile-menu { display: none; flex-direction: column; background: #111; border-top: 1px solid rgba(229,62,62,.15); padding: .75rem 1rem; gap: .1rem; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { color: #e2e8f0; text-decoration: none; padding: .7rem 1rem; border-radius: .6rem; font-size: .9rem; font-weight: 600; transition: background .2s; }
+  .mobile-menu a:hover { background: rgba(229,62,62,.15); }
+
   svg { display: inline-block; vertical-align: middle; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 </style>
 </head>
@@ -407,14 +426,35 @@
 <!-- NAV -->
 <nav>
   <div class="nav-inner max-w">
-    <a href="#" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <div class="nav-logo-text">
         <span class="name text-red">BJ Diesel</span>
         <span class="sub">Gas Mechanics &amp; Diagnostics</span>
       </div>
-      <span class="nav-badge">Bakersfield CA</span>
     </a>
+    <div class="nav-center" id="nav-menu">
+      <div class="nav-dropdown">
+        <button class="nav-link-btn" onclick="toggleMenu()">
+          Servicios
+          <svg viewBox="0 0 24 24" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-content" id="nav-dropdown">
+          <a href="aceite.html">🔧 Cambio de Aceite</a>
+          <a href="diesel.html">⚙️ Motores Diesel</a>
+          <a href="ecm.html">💻 Diagnósticos ECM</a>
+          <a href="ac.html">❄️ Aire Acondicionado</a>
+          <a href="suspension.html">🔩 Suspensión</a>
+          <a href="electrico.html">⚡ Sistema Eléctrico</a>
+          <a href="llantas.html">🛞 Llantas</a>
+          <a href="frenos.html">🛑 Frenos</a>
+          <a href="soldadura.html">🔥 Soldadura</a>
+        </div>
+      </div>
+    </div>
     <div class="nav-right">
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <svg viewBox="0 0 24 24" width="22" height="22"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <div class="lang-toggle">
         <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
         <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
@@ -425,6 +465,18 @@
         <span class="nav-tel-short">Llamar</span>
       </a>
     </div>
+  </div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="aceite.html">🔧 Cambio de Aceite</a>
+    <a href="diesel.html">⚙️ Motores Diesel</a>
+    <a href="ecm.html">💻 Diagnósticos ECM</a>
+    <a href="ac.html">❄️ Aire Acondicionado</a>
+    <a href="suspension.html">🔩 Suspensión</a>
+    <a href="electrico.html">⚡ Sistema Eléctrico</a>
+    <a href="llantas.html">🛞 Llantas</a>
+    <a href="frenos.html">🛑 Frenos</a>
+    <a href="soldadura.html">🔥 Soldadura</a>
   </div>
 </nav>
 
@@ -1261,6 +1313,26 @@ setTimeout(() => { if (!chatOpen) { document.getElementById('chat-badge').style.
 
 // Init quick replies on load
 updateQuickReplies('es');
+</script>
+
+<script>
+function toggleMobileMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+function toggleMenu() {
+  const d = document.getElementById('nav-dropdown');
+  d.style.display = d.style.display === 'flex' ? 'none' : 'flex';
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-dropdown')) {
+    const d = document.getElementById('nav-dropdown');
+    if (d) d.style.display = '';
+  }
+  if (!e.target.closest('.nav-hamburger') && !e.target.closest('.mobile-menu')) {
+    const m = document.getElementById('mobile-menu');
+    if (m) m.classList.remove('open');
+  }
+});
 </script>
 </body>
 </html>
