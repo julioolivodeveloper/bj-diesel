@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BJ Diesel — Gas Mechanics & Diagnostics Bakersfield CA</title>
+<meta name="description" content="BJ Diesel Gas Mechanics & Diagnostics en Bakersfield CA. Oil change, diesel engines, ECM diagnostics, tires, welding, AC, suspension. Tel: (661) 933-1206" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="BJ Diesel — Gas Mechanics & Diagnostics Bakersfield CA" />
+<meta property="og:description" content="BJ Diesel Gas Mechanics & Diagnostics en Bakersfield CA. Motores diesel, diagnósticos ECM, llantas, soldadura, AC. Tel: (661) 933-1206" />
+<meta property="og:image" content="hero.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #E53E3E;
+    --red-light: #FF8080;
+    --red-dark: #C41E3A;
+    --bg: #0a0a0a;
+    --bg2: #0d0d0d;
+    --text: #ffffff;
+    --muted: #94a3b8;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+
+  .max-w { max-width: 1200px; margin: 0 auto; }
+  .px { padding-left: 2rem; padding-right: 2rem; }
+  @media(min-width:768px){ .px { padding-left: 3rem; padding-right: 3rem; } }
+
+  .text-red {
+    background: linear-gradient(135deg, var(--red-light) 0%, var(--red) 40%, var(--red-light) 70%, var(--red-dark) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+  @keyframes shimmer { from { background-position: -200% center; } to { background-position: 200% center; } }
+
+  .btn-red {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--red); color: #fff; border: none; cursor: pointer;
+    padding: .75rem 1.75rem; border-radius: .875rem; font-weight: 900; font-size: .95rem;
+    text-decoration: none; transition: transform .2s, background .2s;
+    white-space: nowrap;
+    box-shadow: 0 0 30px rgba(229,62,62,.35);
+    animation: pulse-red 2.5s ease-in-out infinite;
+  }
+  .btn-red svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-red:hover { background: var(--red-light); transform: scale(1.05); }
+  @keyframes pulse-red {
+    0%,100% { box-shadow: 0 0 20px rgba(229,62,62,.3); }
+    50%      { box-shadow: 0 0 45px rgba(229,62,62,.65); }
+  }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.05);
+    color: #fff; padding: 1rem 2rem; border-radius: 1rem; font-weight: 600;
+    font-size: 1rem; text-decoration: none; transition: border-color .2s, background .2s;
+  }
+  .btn-outline:hover { border-color: rgba(229,62,62,.5); background: rgba(229,62,62,.1); }
+
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
+  .reveal-delay-3 { transition-delay: .3s; }
+
+  @keyframes float {
+    0%,100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+  .float { animation: float 3.5s ease-in-out infinite; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,10,.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(229,62,62,.15);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: .6rem 1rem;
+  }
+  @media(min-width:768px){ .nav-inner { padding: .9rem 3rem; } }
+  .nav-logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+  .nav-logo-text .name { font-weight: 900; font-size: 1rem; line-height: 1.1; }
+  @media(min-width:768px){ .nav-logo-text .name { font-size: 1.2rem; } }
+  .nav-logo-text .sub  { font-size: .6rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+  .nav-badge {
+    background: var(--red); color: #fff; font-size: .6rem; font-weight: 900;
+    padding: .15rem .5rem; border-radius: .3rem; text-transform: uppercase; letter-spacing: .05em;
+  }
+  .nav-tel {
+    display: flex; align-items: center; gap: .4rem;
+    background: var(--red); color: #fff; padding: .45rem .75rem; border-radius: .65rem;
+    font-weight: 900; font-size: .75rem; text-decoration: none;
+    transition: background .2s, transform .2s;
+    animation: pulse-red 2.5s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  @media(min-width:768px){ .nav-tel { padding: .6rem 1.2rem; font-size: .9rem; } }
+  .nav-tel:hover { background: var(--red-light); transform: scale(1.04); }
+  .nav-tel svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .nav-tel-num { display: none; }
+  @media(min-width:480px){ .nav-tel-num { display: inline; } }
+  .nav-tel-short { display: inline; }
+  @media(min-width:480px){ .nav-tel-short { display: none !important; } }
+  .lang-toggle {
+    display: flex; align-items: center; gap: 0;
+    border: 1px solid rgba(229,62,62,.35); border-radius: .65rem; overflow: hidden;
+  }
+  .lang-btn {
+    padding: .35rem .6rem; font-size: .75rem; font-weight: 900; cursor: pointer;
+    border: none; background: transparent; color: var(--muted);
+    transition: background .2s, color .2s;
+  }
+  @media(min-width:768px){ .lang-btn { padding: .45rem .8rem; font-size: .8rem; } }
+  .lang-btn.active { background: var(--red); color: #fff; }
+  .lang-btn:not(.active):hover { background: rgba(229,62,62,.15); color: #fff; }
+  .nav-right { display: flex; align-items: center; gap: .5rem; }
+
+  /* HERO */
+  #hero {
+    position: relative; min-height: 100vh; display: flex; align-items: center;
+    padding-top: 80px; overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .5; }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(10,10,10,.88) 35%, rgba(10,10,10,.5) 65%, rgba(10,10,10,.2));
+  }
+  @media(max-width:767px) {
+    .hero-bg::after { background: linear-gradient(to bottom, rgba(10,10,10,.3) 0%, rgba(10,10,10,.8) 60%, rgba(10,10,10,.97) 100%) !important; }
+  }
+  .hero-overlay-bottom {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+    background: linear-gradient(to top, #0a0a0a, transparent); z-index: 1;
+  }
+  .hero-content { position: relative; z-index: 2; padding: 5rem 2rem; }
+  @media(min-width:768px){ .hero-content { padding: 5rem 3rem; } }
+  .hero-tag { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; }
+  .hero-tag .line { width: 2rem; height: 2px; background: var(--red); }
+  .hero-tag span { color: var(--red); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .15em; }
+  .hero-h1 { font-size: clamp(3rem, 9vw, 6.5rem); font-weight: 900; line-height: .9; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: -.02em; }
+  .hero-p { color: var(--muted); font-size: 1.15rem; margin-bottom: 1.5rem; line-height: 1.6; max-width: 520px; }
+  .hero-p strong { color: var(--red-light); }
+  .badges { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 2.5rem; }
+  .badge {
+    display: flex; align-items: center; gap: .5rem;
+    border: 1px solid rgba(229,62,62,.3); border-radius: 999px;
+    padding: .4rem 1.2rem; font-size: .85rem; font-weight: 700;
+    background: rgba(229,62,62,.08);
+  }
+  .badge svg { width: 14px; height: 14px; color: var(--red); }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+  .particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+  .particle {
+    position: absolute; width: 4px; height: 4px; background: var(--red);
+    border-radius: 50%; opacity: 0;
+    animation: particle-float 4s ease-in-out infinite;
+  }
+  @keyframes particle-float {
+    0%   { opacity: 0; transform: translateY(0); }
+    25%  { opacity: .4; }
+    75%  { opacity: .2; }
+    100% { opacity: 0; transform: translateY(-80px); }
+  }
+
+  /* MARQUEE */
+  .marquee-wrap {
+    background: linear-gradient(90deg, var(--red-dark), var(--red), var(--red-dark));
+    padding: .9rem 0; overflow: hidden;
+  }
+  .marquee-track {
+    display: flex; gap: 4rem; width: max-content;
+    animation: marquee 22s linear infinite;
+  }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-item {
+    display: flex; align-items: center; gap: 1rem; flex-shrink: 0;
+    font-weight: 900; font-size: 1rem; text-transform: uppercase;
+    letter-spacing: .08em; color: #fff; white-space: nowrap;
+  }
+  .marquee-item svg { width: 18px; height: 18px; }
+
+  /* SECTIONS */
+  section { padding: 6rem 0; }
+  .section-label { color: var(--red); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; margin-bottom: .75rem; }
+  .section-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; text-transform: uppercase; margin-bottom: 1rem; line-height: 1; }
+  .section-desc { color: var(--muted); font-size: 1.1rem; max-width: 520px; line-height: 1.6; }
+  .center { text-align: center; }
+  .center .section-desc { margin: 0 auto; }
+
+  /* SERVICES */
+  #servicios { background: var(--bg2); }
+  .services-grid {
+    display: grid; grid-template-columns: 1fr;
+    gap: 1.25rem; margin-top: 3.5rem;
+  }
+  @media(min-width:600px){ .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media(min-width:900px){ .services-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .service-card {
+    position: relative; overflow: hidden;
+    display: flex; align-items: flex-end; padding: 1.5rem;
+    border: 1px solid rgba(229,62,62,.2); border-radius: 1.25rem;
+    min-height: 190px;
+    transition: transform .35s, border-color .35s, box-shadow .35s;
+  }
+  .service-card .sc-bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    opacity: .5; transition: opacity .4s, transform .4s;
+  }
+  .service-card::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,10,10,.92) 30%, rgba(10,10,10,.4) 65%, rgba(10,10,10,.1));
+    border-radius: inherit;
+  }
+  .service-card:hover { transform: translateY(-5px); border-color: rgba(229,62,62,.6); box-shadow: 0 20px 40px rgba(229,62,62,.18); }
+  .service-card:hover .sc-bg { opacity: .45; transform: scale(1.06); }
+  .service-card-body { position: relative; z-index: 2; display: flex; align-items: flex-end; gap: 1rem; width: 100%; }
+  .service-icon {
+    width: 44px; height: 44px; border-radius: .75rem; flex-shrink: 0;
+    background: rgba(229,62,62,.2); border: 1px solid rgba(229,62,62,.3);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .service-icon svg { width: 22px; height: 22px; color: var(--red); }
+  .service-card h3 { font-weight: 900; font-size: 1rem; margin-bottom: .2rem; }
+  .service-card p  { color: var(--muted); font-size: .82rem; line-height: 1.4; }
+
+  /* DIESEL FEATURE */
+  #diesel {
+    position: relative; overflow: hidden;
+  }
+  .bg-img-section { position: absolute; inset: -60px; }
+  .bg-img-section img {
+    width: 100%; height: calc(100% + 120px); object-fit: cover; opacity: .75;
+    transition: transform .1s linear; will-change: transform;
+  }
+  .bg-img-section::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,.85) 35%, rgba(10,10,10,.4) 65%, rgba(10,10,10,.1)); }
+  .diesel-mobile-bg { display: none; position: absolute; inset: 0; }
+  .diesel-mobile-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .5; }
+  .diesel-mobile-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(10,10,10,.3) 0%, rgba(10,10,10,.8) 60%, rgba(10,10,10,.97) 100%);
+  }
+  @media(max-width: 767px) {
+    .bg-img-section { display: none; }
+    .diesel-mobile-bg { display: block; }
+  }
+  .diesel-content { position: relative; z-index: 2; max-width: 640px; }
+  .feature-list { list-style: none; margin: 1.5rem 0 2.5rem; display: flex; flex-direction: column; gap: .75rem; }
+  .feature-list li { display: flex; align-items: center; gap: .75rem; color: var(--muted); }
+  .feature-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
+
+  /* BRANDS */
+  #marcas { background: var(--bg2); position: relative; overflow: hidden; }
+  .marcas-bg { position: absolute; inset: 0; }
+  .marcas-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .06; }
+  .marcas-bg::after { content: ''; position: absolute; inset: 0; background: rgba(13,13,13,.8); }
+  .marcas-content { position: relative; z-index: 2; }
+  .pills { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; margin: 3rem 0; }
+  .pill {
+    padding: .6rem 1.5rem; border-radius: 999px;
+    border: 1px solid rgba(229,62,62,.3); background: rgba(229,62,62,.08);
+    font-weight: 900; font-size: .85rem; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--red-light);
+    transition: background .2s, border-color .2s;
+  }
+  .pill:hover { background: rgba(229,62,62,.2); border-color: rgba(229,62,62,.6); }
+
+  /* LLANTAS */
+  #llantas { background: var(--bg); position: relative; overflow: hidden; }
+  .llantas-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+  @media(min-width:900px){ .llantas-grid { grid-template-columns: 1fr 1fr; } }
+  .img-glow { position: relative; }
+  .img-glow::before {
+    content: ''; position: absolute; inset: -1.5rem;
+    background: rgba(229,62,62,.08); border-radius: 1.5rem; filter: blur(30px);
+  }
+  .img-glow img { position: relative; width: 100%; border-radius: 1.25rem; border: 1px solid rgba(229,62,62,.2); box-shadow: 0 30px 60px rgba(0,0,0,.5); }
+  .llantas-mobile-bg { display: none; }
+  @media(max-width:899px) {
+    .llantas-mobile-bg { display: block; position: absolute; inset: 0; z-index: 0; }
+    .llantas-mobile-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .3; }
+    .llantas-mobile-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,10,10,.5) 0%, rgba(10,10,10,.9) 100%); }
+    .llantas-grid { position: relative; z-index: 1; }
+    .img-glow { display: none; }
+  }
+
+  /* GALLERY */
+  #galeria { background: var(--bg2); }
+  .carousel-wrap { overflow: hidden; position: relative; padding: 0 0 1rem; cursor: grab; user-select: none; }
+  .carousel-wrap:active { cursor: grabbing; }
+  .carousel-track {
+    display: flex; gap: 1.25rem; padding: 0 2rem;
+    transition: transform .45s cubic-bezier(.25,.1,.25,1); will-change: transform;
+  }
+  @media(min-width:768px){ .carousel-track { padding: 0 3rem; } }
+  .carousel-slide {
+    flex: 0 0 calc(85vw - 2rem); max-width: 340px;
+    position: relative; border-radius: 1.25rem; overflow: hidden;
+    border: 1px solid rgba(229,62,62,.15);
+    transition: border-color .3s, box-shadow .3s, transform .3s;
+    aspect-ratio: 4/3;
+  }
+  @media(min-width:600px){ .carousel-slide { flex: 0 0 300px; } }
+  @media(min-width:900px){ .carousel-slide { flex: 0 0 340px; } }
+  .carousel-slide.active { border-color: rgba(229,62,62,.5); box-shadow: 0 0 30px rgba(229,62,62,.2); transform: scale(1.03); }
+  .carousel-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .carousel-slide:hover img { transform: scale(1.06); }
+  .carousel-slide span {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: .75rem 1rem;
+    background: linear-gradient(to top, rgba(10,10,10,.9), transparent);
+    color: #fff; font-weight: 700; font-size: .85rem;
+    transform: translateY(100%); transition: transform .3s ease;
+  }
+  .carousel-slide:hover span, .carousel-slide.active span { transform: translateY(0); }
+  .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 1.25rem; margin-top: 1.75rem; }
+  .carousel-btn {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(229,62,62,.12); border: 1px solid rgba(229,62,62,.3);
+    color: var(--red); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background .2s, transform .15s;
+  }
+  .carousel-btn:hover { background: rgba(229,62,62,.25); border-color: var(--red); transform: scale(1.08); }
+  .carousel-dots { display: flex; gap: .5rem; align-items: center; }
+  .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(229,62,62,.25); border: none; cursor: pointer; transition: background .3s, transform .3s; }
+  .carousel-dot.active { background: var(--red); transform: scale(1.4); }
+
+  /* REVIEWS */
+  .reviews-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+  @media(min-width:600px){ .reviews-grid { grid-template-columns: 1fr 1fr; } }
+  @media(min-width:900px){ .reviews-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .review-card {
+    background: linear-gradient(135deg, #111 0%, #160606 100%);
+    border: 1px solid rgba(229,62,62,.2); border-radius: 1.25rem;
+    padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem;
+    transition: transform .3s, border-color .3s, box-shadow .3s;
+  }
+  .review-card:hover { transform: translateY(-5px); border-color: rgba(229,62,62,.5); box-shadow: 0 20px 40px rgba(229,62,62,.1); }
+  .review-stars { display: flex; gap: 3px; }
+  .review-text { color: #cbd5e1; font-size: .9rem; line-height: 1.65; flex: 1; font-style: italic; }
+  .review-text::before { content: '\201C'; color: var(--red); font-size: 1.5rem; line-height: 0; vertical-align: -.3em; margin-right: .1rem; font-style: normal; }
+  .review-author { display: flex; align-items: center; gap: .75rem; margin-top: .25rem; }
+  .review-avatar { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1rem; color: #fff; }
+  .review-author strong { display: block; font-size: .9rem; color: #fff; }
+  .review-author span  { display: block; font-size: .75rem; color: var(--muted); margin-top: .1rem; }
+
+  /* CTA */
+  #cta { position: relative; overflow: hidden; text-align: center; }
+  .cta-bg { position: absolute; inset: 0; }
+  .cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .15; }
+  .cta-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, #0a0a0a 0%, rgba(10,10,10,.75) 50%, #0a0a0a 100%); }
+  .cta-content { position: relative; z-index: 2; padding: 6rem 2rem; }
+  @media(min-width:768px){ .cta-content { padding: 7rem 3rem; } }
+  .cta-emblem {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: rgba(229,62,62,.15); border: 2px solid rgba(229,62,62,.4);
+    margin-bottom: 2rem;
+    animation: float 3.5s ease-in-out infinite;
+  }
+  .cta-emblem svg { width: 48px; height: 48px; color: var(--red); }
+  .cta-h2 { font-size: clamp(2.8rem, 8vw, 5.5rem); font-weight: 900; text-transform: uppercase; margin-bottom: 1rem; line-height: 1; }
+  .cta-p { color: var(--muted); font-size: 1.2rem; margin-bottom: 2.5rem; }
+  .cta-p strong { color: var(--red-light); }
+  .cta-tel {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--red); color: #fff; padding: .9rem 2.2rem; border-radius: 1rem;
+    font-weight: 900; font-size: 1.2rem; text-decoration: none; white-space: nowrap;
+    transition: background .2s, transform .2s;
+    box-shadow: 0 0 50px rgba(229,62,62,.45);
+    animation: pulse-red 2.5s ease-in-out infinite;
+  }
+  .cta-tel:hover { background: var(--red-light); transform: scale(1.04); }
+  .cta-tel svg { width: 28px; height: 28px; }
+  .cta-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2.5rem; color: var(--muted); }
+  .cta-info-item { display: flex; align-items: center; gap: .5rem; font-size: .95rem; }
+  .cta-info-item svg { width: 18px; height: 18px; color: var(--red); }
+
+  /* FOOTER */
+  footer { background: #060606; border-top: 1px solid rgba(229,62,62,.1); padding: 2.5rem 2rem; }
+  @media(min-width:768px){ footer { padding: 2.5rem 3rem; } }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+  .footer-brand .name { font-weight: 900; font-size: 1.1rem; }
+  .footer-brand .addr { font-size: .75rem; color: #4b5563; margin-top: .25rem; }
+  .footer-right { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: #4b5563; font-size: .85rem; }
+  .footer-right a { color: #94a3b8; text-decoration: none; display: flex; align-items: center; gap: .35rem; transition: color .2s; font-weight: 600; }
+  .footer-right a:hover { color: var(--red); }
+  .footer-right a svg { width: 14px; height: 14px; }
+
+  svg { display: inline-block; vertical-align: middle; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner max-w">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-text">
+        <span class="name text-red">BJ Diesel</span>
+        <span class="sub">Gas Mechanics &amp; Diagnostics</span>
+      </div>
+      <span class="nav-badge">Bakersfield CA</span>
+    </a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="tel:+16619331206" class="nav-tel">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="nav-tel-num">(661) 933-1206</span>
+        <span class="nav-tel-short">Llamar</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="hero.jpg" alt="BJ Diesel Mechanics" />
+  </div>
+  <div class="hero-overlay-bottom"></div>
+  <div class="particles">
+    <div class="particle" style="left:12%;top:30%;animation-delay:0s;animation-duration:4s"></div>
+    <div class="particle" style="left:25%;top:60%;animation-delay:.8s;animation-duration:5s"></div>
+    <div class="particle" style="left:40%;top:25%;animation-delay:1.5s;animation-duration:3.5s"></div>
+    <div class="particle" style="left:60%;top:50%;animation-delay:.3s;animation-duration:4.5s"></div>
+    <div class="particle" style="left:75%;top:35%;animation-delay:2s;animation-duration:4s"></div>
+    <div class="particle" style="left:88%;top:65%;animation-delay:1s;animation-duration:3.8s"></div>
+  </div>
+  <div class="hero-content max-w px reveal visible">
+    <div class="hero-tag">
+      <div class="line"></div>
+      <span data-t="hero.tag">Bakersfield, CA &bull; Gas &amp; Diesel &bull; Llantas</span>
+    </div>
+    <h1 class="hero-h1">
+      BJ<br>
+      <span class="text-red">Diesel</span>
+    </h1>
+    <p class="hero-p" data-t="hero.desc">
+      Mecánica profesional <strong>gas y diesel.</strong>
+      Diagnósticos ECM, suspensión, llantas, soldadura y más.
+    </p>
+    <div class="badges">
+      <div class="badge">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span data-t="badge.price">Precios Justos</span>
+      </div>
+      <div class="badge">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span data-t="badge.fast">Servicio Rápido</span>
+      </div>
+      <div class="badge">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span data-t="badge.trust">Confiable</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="tel:+16619331206" class="btn-red">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (661) 933-1206
+      </a>
+      <a href="#servicios" class="btn-outline">
+        <span data-t="hero.cta">Ver Servicios</span>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg><span data-t="mq1">Diagnósticos ECM</span></div>
+    <div class="marquee-item" style="opacity:.5">&bull;</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span data-t="mq2">Cat · Detroit · Cummins</span></div>
+    <div class="marquee-item" style="opacity:.5">&bull;</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-t="mq3">Llantas Nuevas &amp; Usadas</span></div>
+    <div class="marquee-item" style="opacity:.5">&bull;</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg><span data-t="mq1">Diagnósticos ECM</span></div>
+    <div class="marquee-item" style="opacity:.5">&bull;</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span data-t="mq2">Cat · Detroit · Cummins</span></div>
+    <div class="marquee-item" style="opacity:.5">&bull;</div>
+    <div class="marquee-item"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-t="mq3">Llantas Nuevas &amp; Usadas</span></div>
+    <div class="marquee-item" style="opacity:.5">&bull;</div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="max-w px">
+    <div class="reveal center">
+      <p class="section-label" data-t="serv.label">Lo que hacemos</p>
+      <h2 class="section-title"><span data-t="serv.title">Nuestros</span> <span class="text-red" data-t="serv.title2">Servicios</span></h2>
+      <p class="section-desc" data-t="serv.desc">Mecánica completa para carros, camionetas y camiones. Rápido, honesto y a buen precio.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="sc-bg" style="background-image:url('img1.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div><h3 data-t="s1.name">Cambio de Aceite</h3><p data-t="s1.desc">Todos los tipos de aceite, rápido y al precio correcto</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="sc-bg" style="background-image:url('img2.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div><h3 data-t="s2.name">Motores Diesel</h3><p data-t="s2.desc">Cat, Detroit, Cummins y más marcas</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="sc-bg" style="background-image:url('img3.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div><h3 data-t="s3.name">Diagnósticos E.C.M.</h3><p data-t="s3.desc">Escáner computarizado para todos los sistemas</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-bg" style="background-image:url('img4.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5-3 8-5 10H7c-2-2-5-5-5-10A10 10 0 0 1 12 2z"/><line x1="12" y1="6" x2="12" y2="12"/></svg></div>
+          <div><h3 data-t="s4.name">Aire Acondicionado</h3><p data-t="s4.desc">Reparación y recarga de sistemas A/C</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="sc-bg" style="background-image:url('img5.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h10M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div><h3 data-t="s5.name">Suspensión</h3><p data-t="s5.desc">Amortiguadores, resortes y dirección</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="sc-bg" style="background-image:url('img6.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div><h3 data-t="s6.name">Problemas Eléctricos</h3><p data-t="s6.desc">Diagnóstico y reparación eléctrica completa</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-bg" style="background-image:url('img7.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div><h3 data-t="s7.name">Llantas</h3><p data-t="s7.desc">Nuevas y usadas para carros y camiones</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="sc-bg" style="background-image:url('img8.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><h3 data-t="s8.name">Frenos</h3><p data-t="s8.desc">Pastillas, discos, tambores y líquido</p></div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="sc-bg" style="background-image:url('img9.jpg')"></div>
+        <div class="service-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14a1 1 0 0 0 .3-.7A6 6 0 1 0 8.6 14z"/></svg></div>
+          <div><h3 data-t="s9.name">Soldadura</h3><p data-t="s9.desc">Aluminio, acero y todo tipo de metal</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIESEL FEATURE -->
+<section id="diesel" style="padding:7rem 0;">
+  <div class="bg-img-section" id="diesel-bg">
+    <img src="img2.jpg" alt="" id="diesel-img" />
+  </div>
+  <div class="diesel-mobile-bg">
+    <img src="img1.jpg" alt="" />
+  </div>
+  <div class="max-w px">
+    <div class="diesel-content reveal">
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <p class="section-label" style="margin:0" data-t="die.label">Especialistas en Diesel</p>
+      </div>
+      <h2 class="section-title"><span data-t="die.title">Motores</span> <span class="text-red" data-t="die.title2">Gas &amp; Diesel</span></h2>
+      <p style="color:var(--muted);font-size:1.15rem;margin-bottom:1rem;line-height:1.6;" data-t="die.desc">
+        Expertos en <strong style="color:var(--red-light)">motores a gasolina y diesel.</strong>
+        Atendemos carros, camionetas, y camiones de todo tipo.
+      </p>
+      <ul class="feature-list">
+        <li data-t="die.f1">Cat, Detroit, Cummins y más</li>
+        <li data-t="die.f2">Soldamos aluminio y acero</li>
+        <li data-t="die.f3">Diagnósticos E.C.M. computarizados</li>
+        <li data-t="die.f4">Problemas eléctricos y de dirección</li>
+      </ul>
+      <a href="tel:+16619331206" class="btn-red">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-t="btn.call">Llamar ahora</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MARCAS -->
+<section id="marcas" style="padding:7rem 0;">
+  <div class="marcas-bg">
+    <img src="img3.jpg" alt="" />
+  </div>
+  <div class="marcas-content max-w px">
+    <div class="reveal center">
+      <p class="section-label" data-t="mar.label">Trabajamos con</p>
+      <h2 class="section-title"><span data-t="mar.title">Todas las</span> <span class="text-red" data-t="mar.title2">Marcas</span></h2>
+      <p class="section-desc" style="margin:0 auto;" data-t="mar.desc">Experiencia en la mayoría de marcas de carros, camionetas y camiones.</p>
+    </div>
+    <div class="pills reveal">
+      <div class="pill">Ford</div>
+      <div class="pill">Chevy</div>
+      <div class="pill">Dodge</div>
+      <div class="pill">GMC</div>
+      <div class="pill">Cat</div>
+      <div class="pill">Detroit</div>
+      <div class="pill">Cummins</div>
+      <div class="pill">Freightliner</div>
+      <div class="pill">Kenworth</div>
+      <div class="pill">Peterbilt</div>
+      <div class="pill">Toyota</div>
+      <div class="pill" data-t="mar.more">Y más...</div>
+    </div>
+  </div>
+</section>
+
+<!-- LLANTAS -->
+<section id="llantas">
+  <div class="llantas-mobile-bg">
+    <img src="img7.jpg" alt="" />
+  </div>
+  <div class="max-w px">
+    <div class="llantas-grid">
+      <div class="reveal">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <p class="section-label" style="margin:0" data-t="ll.label">Venta de Llantas</p>
+        </div>
+        <h2 class="section-title"><span data-t="ll.title">Llantas</span> <span class="text-red" data-t="ll.title2">Nuevas &amp; Usadas</span></h2>
+        <p style="color:var(--muted);font-size:1.1rem;margin-bottom:1.5rem;line-height:1.6;" data-t="ll.desc">
+          Vendemos llantas nuevas y usadas para carros, camionetas y camiones. También montaje y balanceo.
+        </p>
+        <a href="tel:+16619331206" class="btn-red" style="margin-top:.5rem;">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-t="btn.quote">Consultar precio</span>
+        </a>
+      </div>
+      <div class="img-glow reveal reveal-delay-2">
+        <img src="img7.jpg" alt="Llantas BJ Diesel" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" style="padding:6rem 0;overflow:hidden;">
+  <div class="max-w px">
+    <div class="reveal center" style="margin-bottom:3rem;">
+      <p class="section-label" data-t="gal.label">Nuestro Trabajo</p>
+      <h2 class="section-title"><span class="text-red" data-t="gal.title">Galería</span></h2>
+    </div>
+  </div>
+  <div class="carousel-wrap" id="carousel-wrap">
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-slide"><img src="hero.jpg"  alt="BJ Diesel" /><span>BJ Diesel Bakersfield</span></div>
+      <div class="carousel-slide"><img src="img1.jpg"  alt="Cambio de aceite" /><span>Cambio de Aceite</span></div>
+      <div class="carousel-slide"><img src="img2.jpg"  alt="Motor diesel" /><span>Motores Diesel</span></div>
+      <div class="carousel-slide"><img src="img3.jpg"  alt="Diagnósticos ECM" /><span>Diagnósticos ECM</span></div>
+      <div class="carousel-slide"><img src="img4.jpg"  alt="Aire acondicionado" /><span>Aire Acondicionado</span></div>
+      <div class="carousel-slide"><img src="img5.jpg"  alt="Suspensión" /><span>Suspensión</span></div>
+      <div class="carousel-slide"><img src="img6.jpg"  alt="Eléctrico" /><span>Sistema Eléctrico</span></div>
+      <div class="carousel-slide"><img src="img7.jpg"  alt="Llantas" /><span>Llantas</span></div>
+      <div class="carousel-slide"><img src="img8.jpg"  alt="Frenos" /><span>Frenos</span></div>
+      <div class="carousel-slide"><img src="img9.jpg"  alt="Soldadura" /><span>Soldadura</span></div>
+      <div class="carousel-slide"><img src="img10.jpg" alt="Mecánica general" /><span>Mecánica General</span></div>
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-btn" onclick="carouselPrev()">
+      <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="carousel-dots" id="carousel-dots"></div>
+    <button class="carousel-btn" onclick="carouselNext()">
+      <svg viewBox="0 0 24 24" width="20" height="20"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section id="resenas" style="background:var(--bg);padding:6rem 0;">
+  <div class="max-w px">
+    <div class="reveal center" style="margin-bottom:3.5rem;">
+      <p class="section-label" data-t="rev.label">Lo que dicen nuestros clientes</p>
+      <h2 class="section-title"><span data-t="rev.title">Reseñas</span> <span class="text-red" data-t="rev.title2">Verificadas</span></h2>
+      <div style="display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:1rem;">
+        <div style="display:flex;gap:3px;">
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="22" height="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="22" height="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="22" height="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="22" height="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="22" height="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span style="color:var(--red);font-weight:900;font-size:1.1rem;">5.0</span>
+        <span style="color:var(--muted);font-size:.9rem;" data-t="rev.count">· Google Reviews</span>
+      </div>
+    </div>
+    <div class="reviews-grid reveal">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Mi camión Freightliner tenía problemas con el motor Cummins y nadie lo podía resolver. BJ Diesel lo diagnósticó en horas y lo reparó ese mismo día. Excelente trabajo, muy profesionales."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#7c3aed;">R</div>
+          <div><strong>Roberto M.</strong><span>Bakersfield, CA · hace 1 semana</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Fui a comprar llantas para mi pickup y además me arreglaron la suspensión. Precio muy justo y el trabajo quedó perfecto. Ya los tengo en mis contactos para lo que necesite."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#0891b2;">J</div>
+          <div><strong>Juan C.</strong><span>Bakersfield, CA · hace 2 semanas</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E53E3E" stroke="none" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"El A/C de mi camioneta no enfriaba y en BJ Diesel lo revisaron y repararon el mismo día. También me hicieron el cambio de aceite. Honesto con los precios, sin cobros escondidos."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#b45309;">M</div>
+          <div><strong>María G.</strong><span>Bakersfield, CA · hace 1 mes</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-bg">
+    <img src="img10.jpg" alt="" />
+  </div>
+  <div class="cta-content reveal">
+    <div class="cta-emblem">
+      <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+    </div>
+    <h2 class="cta-h2"><span data-t="cta.title">¿Tu Carro</span> <span class="text-red" data-t="cta.title2">Necesita Ayuda?</span></h2>
+    <p class="cta-p" data-t="cta.desc">
+      Llámanos o manda un texto ahora.<br>
+      <strong>Atendemos en Bakersfield y alrededores.</strong>
+    </p>
+    <a href="tel:+16619331206" class="cta-tel">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (661) 933-1206
+    </a>
+    <div class="cta-info">
+      <div class="cta-info-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        7675 S Union Ave, Bakersfield CA 93307
+      </div>
+      <div class="cta-info-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        BJdiesel76@gmail.com
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="name text-red">BJ Diesel Gas Mechanics &amp; Diagnostics</p>
+      <p class="addr">7675 S Union Ave, Bakersfield CA 93307</p>
+    </div>
+    <div class="footer-right">
+      <a href="tel:+16619331206">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (661) 933-1206
+      </a>
+      <a href="mailto:BJdiesel76@gmail.com">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        BJdiesel76@gmail.com
+      </a>
+      <span data-t="footer.copy">&copy; 2025 BJ Diesel. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+reveals.forEach(el => { if (!el.classList.contains('visible')) observer.observe(el); });
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// TRANSLATIONS
+const T = {
+  es: {
+    'hero.tag': 'Bakersfield, CA &bull; Gas &amp; Diesel &bull; Llantas',
+    'hero.desc': 'Mecánica profesional <strong>gas y diesel.</strong> Diagnósticos ECM, suspensión, llantas, soldadura y más.',
+    'badge.price': 'Precios Justos', 'badge.fast': 'Servicio Rápido', 'badge.trust': 'Confiable',
+    'hero.cta': 'Ver Servicios',
+    'mq1': 'Diagnósticos ECM', 'mq2': 'Cat · Detroit · Cummins', 'mq3': 'Llantas Nuevas &amp; Usadas',
+    'serv.label': 'Lo que hacemos', 'serv.title': 'Nuestros', 'serv.title2': 'Servicios',
+    'serv.desc': 'Mecánica completa para carros, camionetas y camiones. Rápido, honesto y a buen precio.',
+    's1.name':'Cambio de Aceite',      's1.desc':'Todos los tipos de aceite, rápido y al precio correcto',
+    's2.name':'Motores Diesel',         's2.desc':'Cat, Detroit, Cummins y más marcas',
+    's3.name':'Diagnósticos E.C.M.',    's3.desc':'Escáner computarizado para todos los sistemas',
+    's4.name':'Aire Acondicionado',     's4.desc':'Reparación y recarga de sistemas A/C',
+    's5.name':'Suspensión',             's5.desc':'Amortiguadores, resortes y dirección',
+    's6.name':'Problemas Eléctricos',   's6.desc':'Diagnóstico y reparación eléctrica completa',
+    's7.name':'Llantas',                's7.desc':'Nuevas y usadas para carros y camiones',
+    's8.name':'Frenos',                 's8.desc':'Pastillas, discos, tambores y líquido',
+    's9.name':'Soldadura',              's9.desc':'Aluminio, acero y todo tipo de metal',
+    'die.label':'Especialistas en Diesel','die.title':'Motores','die.title2':'Gas &amp; Diesel',
+    'die.desc':'Expertos en <strong style="color:var(--red-light)">motores a gasolina y diesel.</strong> Atendemos carros, camionetas, y camiones de todo tipo.',
+    'die.f1':'Cat, Detroit, Cummins y más','die.f2':'Soldamos aluminio y acero',
+    'die.f3':'Diagnósticos E.C.M. computarizados','die.f4':'Problemas eléctricos y de dirección',
+    'btn.call':'Llamar ahora', 'btn.quote':'Consultar precio',
+    'mar.label':'Trabajamos con','mar.title':'Todas las','mar.title2':'Marcas',
+    'mar.desc':'Experiencia en la mayoría de marcas de carros, camionetas y camiones.','mar.more':'Y más...',
+    'll.label':'Venta de Llantas','ll.title':'Llantas','ll.title2':'Nuevas &amp; Usadas',
+    'll.desc':'Vendemos llantas nuevas y usadas para carros, camionetas y camiones. También montaje y balanceo.',
+    'gal.label':'Nuestro Trabajo','gal.title':'Galería',
+    'rev.label':'Lo que dicen nuestros clientes','rev.title':'Reseñas','rev.title2':'Verificadas',
+    'rev.count':'· Google Reviews',
+    'cta.title':'¿Tu Carro','cta.title2':'Necesita Ayuda?',
+    'cta.desc':'Llámanos o manda un texto ahora.<br><strong>Atendemos en Bakersfield y alrededores.</strong>',
+    'footer.copy':'&copy; 2025 BJ Diesel. Todos los derechos reservados.',
+  },
+  en: {
+    'hero.tag': 'Bakersfield, CA &bull; Gas &amp; Diesel &bull; Tires',
+    'hero.desc': 'Professional <strong>gas and diesel mechanics.</strong> ECM diagnostics, suspension, tires, welding and more.',
+    'badge.price': 'Fair Prices', 'badge.fast': 'Fast Service', 'badge.trust': 'Reliable',
+    'hero.cta': 'Our Services',
+    'mq1': 'ECM Diagnostics', 'mq2': 'Cat · Detroit · Cummins', 'mq3': 'New &amp; Used Tires',
+    'serv.label': 'What we do', 'serv.title': 'Our', 'serv.title2': 'Services',
+    'serv.desc': 'Full mechanics for cars, trucks and big rigs. Fast, honest and affordable.',
+    's1.name':'Oil Change',             's1.desc':'All oil types, fast and at the right price',
+    's2.name':'Diesel Engines',         's2.desc':'Cat, Detroit, Cummins and more brands',
+    's3.name':'E.C.M. Diagnostics',     's3.desc':'Computer scanner for all vehicle systems',
+    's4.name':'Air Conditioning',       's4.desc':'A/C system repair and recharge',
+    's5.name':'Suspension',             's5.desc':'Shocks, springs and steering',
+    's6.name':'Electrical Issues',      's6.desc':'Full electrical diagnosis and repair',
+    's7.name':'Tires',                  's7.desc':'New and used tires for cars and trucks',
+    's8.name':'Brakes',                 's8.desc':'Pads, rotors, drums and fluid',
+    's9.name':'Welding',                's9.desc':'Aluminum, steel and all types of metal',
+    'die.label':'Diesel Specialists','die.title':'Gas &amp;','die.title2':'Diesel Engines',
+    'die.desc':'Experts in <strong style="color:var(--red-light)">gas and diesel engines.</strong> We service cars, trucks and big rigs.',
+    'die.f1':'Cat, Detroit, Cummins and more','die.f2':'We weld aluminium and steel',
+    'die.f3':'Computerized ECM diagnostics','die.f4':'Electrical and drive line problems',
+    'btn.call':'Call now', 'btn.quote':'Get a quote',
+    'mar.label':'We work with','mar.title':'All','mar.title2':'Makes &amp; Models',
+    'mar.desc':'Experience with most car, truck and semi-truck brands.','mar.more':'And more...',
+    'll.label':'Tire Sales','ll.title':'New &amp;','ll.title2':'Used Tires',
+    'll.desc':'We sell new and used tires for cars, trucks and big rigs. Mounting and balancing available.',
+    'gal.label':'Our Work','gal.title':'Gallery',
+    'rev.label':'What our customers say','rev.title':'Verified','rev.title2':'Reviews',
+    'rev.count':'· Google Reviews',
+    'cta.title':'Does Your Vehicle','cta.title2':'Need Help?',
+    'cta.desc':'Call or text us now.<br><strong>Serving Bakersfield and surrounding areas.</strong>',
+    'footer.copy':'&copy; 2025 BJ Diesel. All rights reserved.',
+  }
+};
+
+let currentLang = 'es';
+function applyLang(lang) {
+  currentLang = lang;
+  chatLang = lang;
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const key = el.getAttribute('data-t');
+    if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
+  });
+  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  const cbes = document.getElementById('chat-btn-es');
+  const cben = document.getElementById('chat-btn-en');
+  if (cbes) cbes.classList.toggle('active', lang === 'es');
+  if (cben) cben.classList.toggle('active', lang === 'en');
+  if (document.getElementById('chat-online'))
+    document.getElementById('chat-online').textContent = lang === 'es' ? '● En línea ahora' : '● Online now';
+  if (document.getElementById('chat-input'))
+    document.getElementById('chat-input').placeholder = lang === 'es' ? 'Escribe tu pregunta...' : 'Type your question...';
+  updateQuickReplies(lang);
+  localStorage.setItem('bjdiesel-lang', lang);
+}
+function setLang(lang) { applyLang(lang); }
+
+// CAROUSEL
+(function() {
+  const track = document.getElementById('carousel-track');
+  const dotsWrap = document.getElementById('carousel-dots');
+  if (!track) return;
+  const slides = track.querySelectorAll('.carousel-slide');
+  const total = slides.length;
+  let current = 0, autoTimer, startX = 0, dragging = false, dragOffset = 0;
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.onclick = () => goTo(i);
+    dotsWrap.appendChild(d);
+  });
+  function getSlideWidth() { return slides[0].offsetWidth + 20; }
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.style.transform = `translateX(-${current * getSlideWidth()}px)`;
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    resetAuto();
+  }
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 3500);
+  }
+  window.carouselNext = () => goTo(current + 1);
+  window.carouselPrev = () => goTo(current - 1);
+  function onStart(x) { dragging = true; startX = x; dragOffset = 0; track.style.transition = 'none'; }
+  function onMove(x) {
+    if (!dragging) return;
+    dragOffset = x - startX;
+    track.style.transform = `translateX(${-(current * getSlideWidth()) + dragOffset}px)`;
+  }
+  function onEnd() {
+    if (!dragging) return;
+    dragging = false; track.style.transition = '';
+    if (dragOffset < -60) goTo(current + 1);
+    else if (dragOffset > 60) goTo(current - 1);
+    else goTo(current);
+  }
+  track.addEventListener('mousedown',  e => onStart(e.clientX));
+  track.addEventListener('mousemove',  e => onMove(e.clientX));
+  track.addEventListener('mouseup',    onEnd);
+  track.addEventListener('mouseleave', onEnd);
+  track.addEventListener('touchstart', e => onStart(e.touches[0].clientX), {passive:true});
+  track.addEventListener('touchmove',  e => onMove(e.touches[0].clientX), {passive:true});
+  track.addEventListener('touchend',   onEnd);
+  goTo(0);
+})();
+
+// Parallax
+const dieselSection = document.getElementById('diesel');
+const dieselImg = document.getElementById('diesel-img');
+if (dieselSection && dieselImg) {
+  dieselSection.addEventListener('mousemove', (e) => {
+    const rect = dieselSection.getBoundingClientRect();
+    const moveY = ((e.clientY - rect.top) / rect.height - 0.5) * -30;
+    const moveX = ((e.clientX - rect.left) / rect.width - 0.5) * -15;
+    dieselImg.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.05)`;
+  });
+  dieselSection.addEventListener('mouseleave', () => { dieselImg.style.transform = ''; });
+}
+</script>
+
+<!-- CHATBOT -->
+<style>
+  #chat-btn {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: var(--red); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(229,62,62,.5);
+    animation: pulse-red 2.5s ease-in-out infinite;
+    transition: transform .2s;
+  }
+  #chat-btn:hover { transform: scale(1.1); }
+  #chat-btn svg { width: 28px; height: 28px; color: #fff; }
+  #chat-badge {
+    position: absolute; top: -4px; right: -4px;
+    width: 18px; height: 18px; background: #1d4ed8; border-radius: 50%;
+    font-size: .65rem; font-weight: 900; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid #0a0a0a;
+  }
+  #chat-window {
+    position: fixed; bottom: 5.5rem; right: 1.5rem; z-index: 998;
+    width: 340px; max-width: calc(100vw - 2rem);
+    background: #111; border: 1px solid rgba(229,62,62,.25);
+    border-radius: 1.25rem; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    display: none; flex-direction: column; max-height: 520px;
+    animation: chat-in .3s ease;
+  }
+  @keyframes chat-in { from { opacity:0; transform: translateY(20px) scale(.96); } to { opacity:1; transform: none; } }
+  #chat-window.open { display: flex; }
+  .chat-header {
+    background: linear-gradient(135deg, #1a0000, #2a0000);
+    border-bottom: 1px solid rgba(229,62,62,.2);
+    padding: .875rem 1rem;
+    display: flex; align-items: center; gap: .75rem;
+  }
+  .chat-avatar { width: 38px; height: 38px; border-radius: 50%; background: rgba(229,62,62,.2); border: 2px solid var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .chat-avatar svg { width: 20px; height: 20px; color: var(--red); }
+  .chat-header-info { flex: 1; }
+  .chat-header-info strong { display: block; font-size: .9rem; color: #fff; }
+  .chat-header-info span { font-size: .72rem; color: #4ade80; }
+  .chat-lang-toggle { display:flex; gap:0; border:1px solid rgba(255,255,255,.15); border-radius:.5rem; overflow:hidden; margin-left:auto; }
+  .chat-lang-btn { padding:.25rem .5rem; font-size:.7rem; font-weight:900; border:none; background:transparent; color:var(--muted); cursor:pointer; transition:background .2s,color .2s; }
+  .chat-lang-btn.active { background:var(--red); color:#fff; }
+  .chat-close { background: none; border: none; cursor: pointer; color: var(--muted); padding: .25rem; border-radius: .5rem; }
+  .chat-close:hover { color: #fff; }
+  .chat-close svg { width: 18px; height: 18px; }
+  .chat-messages { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .75rem; scrollbar-width: thin; scrollbar-color: rgba(229,62,62,.2) transparent; }
+  .msg { display: flex; gap: .5rem; align-items: flex-end; }
+  .msg.bot { justify-content: flex-start; }
+  .msg.user { justify-content: flex-end; }
+  .msg-bubble { max-width: 80%; padding: .6rem .9rem; border-radius: 1rem; font-size: .85rem; line-height: 1.5; }
+  .msg.bot .msg-bubble { background: #1e1e1e; border: 1px solid rgba(255,255,255,.08); border-bottom-left-radius: .25rem; color: #e2e8f0; }
+  .msg.user .msg-bubble { background: var(--red); color: #fff; font-weight: 700; border-bottom-right-radius: .25rem; }
+  .msg-bot-icon { width: 28px; height: 28px; border-radius: 50%; background: rgba(229,62,62,.15); border: 1px solid rgba(229,62,62,.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .msg-bot-icon svg { width: 14px; height: 14px; color: var(--red); }
+  .chat-contact-btns { display: flex; flex-direction: column; gap: .5rem; margin-top: .5rem; }
+  .chat-contact-btn { display: flex; align-items: center; gap: .5rem; padding: .5rem .875rem; border-radius: .75rem; border: none; cursor: pointer; font-weight: 700; font-size: .82rem; text-decoration: none; transition: transform .15s, opacity .15s; }
+  .chat-contact-btn:hover { transform: scale(1.02); opacity: .9; }
+  .chat-contact-btn.call { background: var(--red); color: #fff; }
+  .chat-contact-btn.maps { background: #1a73e8; color: #fff; }
+  .chat-contact-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+  .quick-replies { display: flex; flex-wrap: wrap; gap: .4rem; padding: .5rem 1rem; border-top: 1px solid rgba(255,255,255,.05); }
+  .qr-btn { padding: .4rem .8rem; border-radius: 999px; border: 1px solid rgba(229,62,62,.35); background: rgba(229,62,62,.08); color: var(--red-light); font-size: .75rem; font-weight: 700; cursor: pointer; transition: background .2s; white-space: nowrap; }
+  .qr-btn:hover { background: rgba(229,62,62,.2); }
+  .chat-input-row { display: flex; gap: .5rem; padding: .75rem; border-top: 1px solid rgba(255,255,255,.06); background: #0d0d0d; }
+  #chat-input { flex: 1; background: #1e1e1e; border: 1px solid rgba(255,255,255,.1); border-radius: .75rem; padding: .5rem .875rem; color: #fff; font-size: .85rem; font-family: inherit; outline: none; }
+  #chat-input:focus { border-color: rgba(229,62,62,.4); }
+  #chat-input::placeholder { color: #4b5563; }
+  #chat-send { width: 36px; height: 36px; border-radius: .75rem; flex-shrink: 0; background: var(--red); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  #chat-send:hover { background: var(--red-light); }
+  #chat-send svg { width: 16px; height: 16px; color: #fff; }
+  .typing { display: flex; gap: 4px; align-items: center; padding: .5rem 0; }
+  .typing span { width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: typing-bounce .9s infinite ease-in-out; }
+  .typing span:nth-child(2) { animation-delay: .15s; }
+  .typing span:nth-child(3) { animation-delay: .3s; }
+  @keyframes typing-bounce { 0%,60%,100% { transform: translateY(0); opacity:.4; } 30% { transform: translateY(-6px); opacity:1; } }
+</style>
+
+<button id="chat-btn" onclick="toggleChat()" aria-label="Abrir chat">
+  <span id="chat-badge">1</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="chat-avatar"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+    <div class="chat-header-info">
+      <strong>BJ Diesel</strong>
+      <span id="chat-online">● En línea ahora</span>
+    </div>
+    <div class="chat-lang-toggle">
+      <button class="chat-lang-btn active" id="chat-btn-es" onclick="setLang('es')">ES</button>
+      <button class="chat-lang-btn" id="chat-btn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="quick-replies" id="quick-replies"></div>
+  <div class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter') sendMsg()" />
+    <button id="chat-send" onclick="sendMsg()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+let chatLang = 'es';
+let chatOpen = false;
+
+function updateQuickReplies(lang) {
+  const qr = document.getElementById('quick-replies');
+  if (!qr) return;
+  if (lang === 'en') {
+    qr.innerHTML = `
+      <button class="qr-btn" onclick="sendQuick('🔧 Oil change price?')">🔧 Oil Change</button>
+      <button class="qr-btn" onclick="sendQuick('🚛 Diesel engine')">🚛 Diesel</button>
+      <button class="qr-btn" onclick="sendQuick('💻 ECM diagnostics')">💻 ECM</button>
+      <button class="qr-btn" onclick="sendQuick('🛞 Tires')">🛞 Tires</button>
+      <button class="qr-btn" onclick="sendQuick('❄️ AC repair')">❄️ AC</button>
+      <button class="qr-btn" onclick="sendQuick('📍 Where are you?')">📍 Location</button>
+      <button class="qr-btn" onclick="sendQuick('📞 Contact')">📞 Contact</button>`;
+  } else {
+    qr.innerHTML = `
+      <button class="qr-btn" onclick="sendQuick('🔧 ¿Precio cambio de aceite?')">🔧 Aceite</button>
+      <button class="qr-btn" onclick="sendQuick('🚛 Motor diesel')">🚛 Diesel</button>
+      <button class="qr-btn" onclick="sendQuick('💻 Diagnóstico ECM')">💻 ECM</button>
+      <button class="qr-btn" onclick="sendQuick('🛞 Llantas')">🛞 Llantas</button>
+      <button class="qr-btn" onclick="sendQuick('❄️ Aire acondicionado')">❄️ A/C</button>
+      <button class="qr-btn" onclick="sendQuick('📍 ¿Dónde están?')">📍 Ubicación</button>
+      <button class="qr-btn" onclick="sendQuick('📞 Contacto')">📞 Contacto</button>`;
+  }
+}
+
+const RESP_ES = [
+  { keys:['aceite','oil','cambio aceite'], reply:'¡Hacemos cambios de aceite rápido! 🔧<br><br>• Aceite convencional y sintético<br>• Para carros, camionetas y camiones<br>• Precios competitivos<br><br>Llámanos para saber el precio de tu vehículo.', contact:true },
+  { keys:['diesel','motor diesel','cummins','detroit','cat','caterpillar'], reply:'Somos especialistas en motores diesel! 🚛<br><br>• Cat, Detroit, Cummins y más<br>• Reparación y mantenimiento<br>• Freightliner, Kenworth, Peterbilt<br><br>¿Cuál es tu motor?', contact:true },
+  { keys:['ecm','computadora','diagnóstico','diagnostico','escaner','scanner','check engine'], reply:'Hacemos diagnósticos computarizados! 💻<br><br>• Lectores de códigos para todos los sistemas<br>• Motores a gasolina y diesel<br>• Identificamos el problema rápido<br><br>¡Llámanos y te ayudamos!', contact:true },
+  { keys:['llanta','llantas','tire','tires','rin','rines'], reply:'Vendemos llantas nuevas y usadas! 🛞<br><br>• Para carros, camionetas y camiones<br>• Montaje y balanceo incluido<br>• Todos los tamaños disponibles<br><br>Llámanos para verificar disponibilidad.', contact:true },
+  { keys:['freno','frenos','brake','brakes','pastilla','disco'], reply:'Reparamos frenos completos! 🛑<br><br>• Pastillas, discos y tambores<br>• Líquido de frenos<br>• Para todos los vehículos<br><br>Llámanos para una revisión.', contact:true },
+  { keys:['suspension','suspensión','amortiguador','resorte','direccion','dirección'], reply:'Trabajamos toda la suspensión! 🔩<br><br>• Amortiguadores y resortes<br>• Rótulas y bujes<br>• Alineación y dirección<br><br>Trae tu vehículo o llámanos.', contact:true },
+  { keys:['electrico','eléctrico','electrical','luz','luces','bateria','batería'], reply:'Resolvemos problemas eléctricos! ⚡<br><br>• Drive lines y problemas de cableado<br>• Baterías y alternadores<br>• Diagnóstico computarizado<br><br>¡Llámanos!', contact:true },
+  { keys:['ac','aire acondicionado','a/c','frio','frío'], reply:'Reparamos sistemas A/C! ❄️<br><br>• Recarga de refrigerante<br>• Compresores y componentes<br>• Para todos los vehículos<br><br>Llámanos para cotizar.', contact:true },
+  { keys:['soldadura','soldar','aluminio','acero'], reply:'Hacemos soldadura profesional! 🔥<br><br>• Aluminio y acero<br>• Todo tipo de metal<br>• Para carros y camiones<br><br>¡Llámanos para más información!', contact:true },
+  { keys:['dirección','direccion','ubicacion','ubicación','donde','dónde','mapa'], reply:'📍 Nos encuentras en:<br><br><strong>7675 S Union Ave<br>Bakersfield, CA 93307</strong>', maps:true, contact:true },
+  { keys:['contacto','llamar','telefono','teléfono','numero','número','whatsapp','texto','text'], reply:'¡Llámanos o manda un texto! 📞<br><br>Atendemos llamadas y mensajes de texto.', contact:true, maps:true },
+  { keys:['hola','hi','hello','buenas','buenos','hey'], reply:'¡Hola! 👋 Bienvenido a <strong>BJ Diesel</strong>.<br><br>Soy el asistente virtual. Puedo ayudarte con información sobre nuestros servicios, precios y ubicación.<br><br>¿En qué te puedo ayudar?', contact:false },
+  { keys:['gracias','thanks'], reply:'¡De nada! 😊 Si necesitas algo más, aquí estamos.', contact:true },
+];
+const RESP_EN = [
+  { keys:['oil','oil change'], reply:'We do fast oil changes! 🔧<br><br>• Conventional and synthetic oil<br>• Cars, trucks and big rigs<br>• Competitive prices<br><br>Call us for your vehicle\'s price.', contact:true },
+  { keys:['diesel','engine','cummins','detroit','cat'], reply:'We are diesel engine specialists! 🚛<br><br>• Cat, Detroit, Cummins and more<br>• Repair and maintenance<br>• Freightliner, Kenworth, Peterbilt<br><br>What engine do you have?', contact:true },
+  { keys:['ecm','computer','diagnostic','scanner','check engine'], reply:'We do computerized diagnostics! 💻<br><br>• Code readers for all systems<br>• Gas and diesel engines<br>• Fast problem identification<br><br>Call us and we\'ll help!', contact:true },
+  { keys:['tire','tires','wheel','rim'], reply:'We sell new and used tires! 🛞<br><br>• Cars, trucks and big rigs<br>• Mounting and balancing included<br>• All sizes available<br><br>Call us to check availability.', contact:true },
+  { keys:['brake','brakes','pad','rotor'], reply:'Full brake service! 🛑<br><br>• Pads, rotors and drums<br>• Brake fluid<br>• All vehicles<br><br>Call us for an inspection.', contact:true },
+  { keys:['suspension','shock','spring','steering'], reply:'Full suspension service! 🔩<br><br>• Shocks and springs<br>• Ball joints and bushings<br>• Alignment and steering<br><br>Bring your vehicle or call us.', contact:true },
+  { keys:['electric','electrical','light','battery'], reply:'We fix electrical issues! ⚡<br><br>• Drive lines and wiring<br>• Batteries and alternators<br>• Computerized diagnosis<br><br>Call us!', contact:true },
+  { keys:['ac','air conditioning','cooling','cold'], reply:'We fix A/C systems! ❄️<br><br>• Refrigerant recharge<br>• Compressors and components<br>• All vehicles<br><br>Call us for a quote.', contact:true },
+  { keys:['weld','welding','aluminum','steel'], reply:'Professional welding! 🔥<br><br>• Aluminum and steel<br>• All metal types<br>• Cars and trucks<br><br>Call us for more info!', contact:true },
+  { keys:['address','location','where','map','directions'], reply:'📍 Find us at:<br><br><strong>7675 S Union Ave<br>Bakersfield, CA 93307</strong>', maps:true, contact:true },
+  { keys:['contact','call','phone','number','text'], reply:'Call or text us! 📞<br><br>We answer calls and text messages.', contact:true, maps:true },
+  { keys:['hi','hello','hey'], reply:'Hello! 👋 Welcome to <strong>BJ Diesel</strong>.<br><br>I\'m the virtual assistant. I can help with service info, prices and location.<br><br>How can I help you?', contact:false },
+  { keys:['thank','thanks'], reply:'You\'re welcome! 😊 If you need anything else, we\'re here.', contact:true },
+];
+
+function getReply(text) {
+  const t = text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const list = chatLang === 'en' ? RESP_EN : RESP_ES;
+  const def = chatLang === 'en' ? 'Thanks for your message! For the best service, please call or text us directly. 😊' : 'Gracias por tu mensaje. Para mejor atención, llámanos o manda un texto. 😊';
+  for (const r of list) { if (r.keys.some(k => t.includes(k))) return r; }
+  return { reply: def, contact: true, maps: false };
+}
+
+function contactBtns(maps) {
+  const label = chatLang === 'en' ? 'Call: (661) 933-1206' : 'Llamar: (661) 933-1206';
+  const mapsLabel = chatLang === 'en' ? 'View on Google Maps' : 'Ver en Google Maps';
+  return `<div class="chat-contact-btns">
+    <a class="chat-contact-btn call" href="tel:+16619331206">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      ${label}
+    </a>
+    ${maps ? `<a class="chat-contact-btn maps" href="https://maps.google.com/?q=7675+S+Union+Ave+Bakersfield+CA+93307" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      ${mapsLabel}
+    </a>` : ''}
+  </div>`;
+}
+
+function addMsg(html, type) {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+  if (type === 'bot') {
+    div.innerHTML = `<div class="msg-bot-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><div class="msg-bubble">${html}</div>`;
+  } else {
+    div.innerHTML = `<div class="msg-bubble">${html}</div>`;
+  }
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function showTyping() {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg bot'; div.id = 'typing-indicator';
+  div.innerHTML = `<div class="msg-bot-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><div class="msg-bubble"><div class="typing"><span></span><span></span><span></span></div></div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function removeTyping() { const t = document.getElementById('typing-indicator'); if (t) t.remove(); }
+
+function botReply(userText) {
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    const r = getReply(userText);
+    let html = r.reply;
+    if (r.contact) html += contactBtns(r.maps || false);
+    addMsg(html, 'bot');
+  }, 900 + Math.random() * 400);
+}
+
+function sendMsg() {
+  const inp = document.getElementById('chat-input');
+  const text = inp.value.trim();
+  if (!text) return;
+  addMsg(text, 'user');
+  inp.value = '';
+  botReply(text);
+}
+
+function sendQuick(text) { addMsg(text, 'user'); botReply(text); }
+
+function toggleChat() {
+  const win = document.getElementById('chat-window');
+  const badge = document.getElementById('chat-badge');
+  chatOpen = !chatOpen;
+  win.classList.toggle('open', chatOpen);
+  if (chatOpen) {
+    badge.style.display = 'none';
+    updateQuickReplies(chatLang);
+    if (document.getElementById('chat-messages').children.length === 0) {
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          removeTyping();
+          const greeting = chatLang === 'en'
+            ? 'Hello! 👋 Welcome to <strong>BJ Diesel</strong>.<br><br>Gas Mechanics & Diagnostics in Bakersfield, CA. Ask me about our services, prices or location!'
+            : '¡Hola! 👋 Bienvenido a <strong>BJ Diesel</strong> — Gas Mechanics &amp; Diagnostics.<br><br>Estoy aquí para ayudarte. Pregunta sobre servicios, precios o ubicación. 😊';
+          addMsg(greeting, 'bot');
+        }, 800);
+      }, 300);
+    }
+  }
+}
+
+setTimeout(() => { if (!chatOpen) { document.getElementById('chat-badge').style.display = 'flex'; } }, 3000);
+
+// Init quick replies on load
+updateQuickReplies('es');
+</script>
+</body>
+</html>
