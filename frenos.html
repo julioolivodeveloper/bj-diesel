@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BJ Diesel — Frenos Bakersfield CA</title>
+<meta name="description" content="Reparación completa del sistema de frenos. Pastillas, discos, tambores, cilindros y líquido de frenos — todo lo que necesita tu vehículo para frenar s"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --red:#E53E3E; --red-light:#FF8080; --red-dark:#C41E3A; --bg:#0a0a0a; --bg2:#0d0d0d; --text:#ffffff; --muted:#94a3b8; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+  .max-w { max-width: 1200px; margin: 0 auto; }
+  .px { padding-left: 2rem; padding-right: 2rem; }
+  @media(min-width:768px){ .px { padding-left: 3rem; padding-right: 3rem; } }
+  .text-red { background: linear-gradient(135deg, var(--red-light) 0%, var(--red) 40%, var(--red-light) 70%, var(--red-dark) 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 3s linear infinite; }
+  @keyframes shimmer { from { background-position: -200% center; } to { background-position: 200% center; } }
+  .btn-red { display: inline-flex; align-items: center; gap: .6rem; background: var(--red); color: #fff; border: none; cursor: pointer; padding: .75rem 1.75rem; border-radius: .875rem; font-weight: 900; font-size: .95rem; text-decoration: none; transition: transform .2s, background .2s; white-space: nowrap; box-shadow: 0 0 30px rgba(229,62,62,.35); animation: pulse-red 2.5s ease-in-out infinite; }
+  .btn-red:hover { background: var(--red-light); transform: scale(1.05); }
+  @keyframes pulse-red { 0%,100% { box-shadow: 0 0 20px rgba(229,62,62,.3); } 50% { box-shadow: 0 0 45px rgba(229,62,62,.65); } }
+  .btn-outline { display: inline-flex; align-items: center; gap: .6rem; border: 1px solid rgba(255,255,255,.2); background: rgba(255,255,255,.05); color: #fff; padding: .75rem 1.75rem; border-radius: .875rem; font-weight: 600; font-size: .95rem; text-decoration: none; transition: border-color .2s, background .2s; }
+  .btn-outline:hover { border-color: rgba(229,62,62,.5); background: rgba(229,62,62,.1); }
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(229,62,62,.15); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: .6rem 1rem; }
+  @media(min-width:768px){ .nav-inner { padding: .9rem 3rem; } }
+  .nav-logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; }
+  .nav-logo-text .name { font-weight: 900; font-size: 1rem; line-height: 1.1; }
+  @media(min-width:768px){ .nav-logo-text .name { font-size: 1.2rem; } }
+  .nav-logo-text .sub { font-size: .6rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+  .nav-tel { display: flex; align-items: center; gap: .4rem; background: var(--red); color: #fff; padding: .45rem .75rem; border-radius: .65rem; font-weight: 900; font-size: .75rem; text-decoration: none; transition: background .2s; animation: pulse-red 2.5s ease-in-out infinite; white-space: nowrap; }
+  @media(min-width:768px){ .nav-tel { padding: .6rem 1.2rem; font-size: .9rem; } }
+  .nav-tel:hover { background: var(--red-light); }
+  .nav-tel svg { width: 14px; height: 14px; }
+  .nav-tel-num { display: none; }
+  @media(min-width:480px){ .nav-tel-num { display: inline; } }
+  .nav-tel-short { display: inline; }
+  @media(min-width:480px){ .nav-tel-short { display: none !important; } }
+  .nav-right { display: flex; align-items: center; gap: .5rem; }
+  .breadcrumb { font-size: .75rem; color: var(--muted); display: flex; align-items: center; gap: .4rem; }
+  .breadcrumb a { color: var(--red); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--red-light); }
+  section { padding: 6rem 0; }
+  .section-label { color: var(--red); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .15em; margin-bottom: .75rem; }
+  .section-title { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; text-transform: uppercase; margin-bottom: 1rem; line-height: 1; }
+  .section-desc { color: var(--muted); font-size: 1.1rem; max-width: 600px; line-height: 1.6; }
+  .feature-list { list-style: none; margin: 1.5rem 0 2.5rem; display: flex; flex-direction: column; gap: .75rem; }
+  .feature-list li { display: flex; align-items: center; gap: .75rem; color: var(--muted); font-size: 1rem; }
+  .feature-list li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
+  .service-icon { width: 44px; height: 44px; border-radius: .75rem; flex-shrink: 0; background: rgba(229,62,62,.2); border: 1px solid rgba(229,62,62,.3); display: flex; align-items: center; justify-content: center; }
+  .service-icon svg { width: 22px; height: 22px; color: var(--red); }
+  .related-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 3rem; }
+  @media(min-width:600px){ .related-grid { grid-template-columns: 1fr 1fr; } }
+  @media(min-width:900px){ .related-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .related-card { position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 1.5rem; border: 1px solid rgba(229,62,62,.2); border-radius: 1.25rem; min-height: 160px; text-decoration: none; transition: transform .35s, border-color .35s, box-shadow .35s; }
+  .related-card .sc-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .45; transition: opacity .4s, transform .4s; }
+  .related-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,.92) 30%, rgba(10,10,10,.4) 65%, rgba(10,10,10,.1)); border-radius: inherit; }
+  .related-card:hover { transform: translateY(-5px); border-color: rgba(229,62,62,.6); box-shadow: 0 20px 40px rgba(229,62,62,.18); }
+  .related-card:hover .sc-bg { opacity: .4; transform: scale(1.06); }
+  .related-card-body { position: relative; z-index: 2; display: flex; align-items: flex-end; gap: 1rem; }
+  .related-card h3 { font-weight: 900; font-size: 1rem; color: #fff; margin-bottom: .15rem; }
+  .related-card p { color: var(--muted); font-size: .8rem; }
+  #cta { position: relative; overflow: hidden; text-align: center; }
+  .cta-bg { position: absolute; inset: 0; }
+  .cta-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .12; }
+  .cta-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, #0a0a0a 0%, rgba(10,10,10,.75) 50%, #0a0a0a 100%); }
+  .cta-content { position: relative; z-index: 2; padding: 6rem 2rem; }
+  .cta-h2 { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 900; text-transform: uppercase; margin-bottom: 1rem; line-height: 1; }
+  .cta-p { color: var(--muted); font-size: 1.1rem; margin-bottom: 2.5rem; }
+  .cta-p strong { color: var(--red-light); }
+  .cta-tel { display: inline-flex; align-items: center; gap: .6rem; background: var(--red); color: #fff; padding: .9rem 2.2rem; border-radius: 1rem; font-weight: 900; font-size: 1.2rem; text-decoration: none; box-shadow: 0 0 50px rgba(229,62,62,.45); animation: pulse-red 2.5s ease-in-out infinite; transition: background .2s; }
+  .cta-tel:hover { background: var(--red-light); }
+  .cta-tel svg { width: 26px; height: 26px; }
+  .cta-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2.5rem; color: var(--muted); }
+  .cta-info-item { display: flex; align-items: center; gap: .5rem; font-size: .95rem; }
+  .cta-info-item svg { width: 18px; height: 18px; color: var(--red); }
+  footer { background: #060606; border-top: 1px solid rgba(229,62,62,.1); padding: 2.5rem 2rem; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem; }
+  .footer-brand .name { font-weight: 900; font-size: 1rem; }
+  .footer-brand .addr { font-size: .75rem; color: #4b5563; margin-top: .2rem; }
+  .footer-right { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: #4b5563; font-size: .85rem; }
+  .footer-right a { color: #94a3b8; text-decoration: none; display: flex; align-items: center; gap: .35rem; transition: color .2s; font-weight: 600; }
+  .footer-right a:hover { color: var(--red); }
+  .footer-right a svg { width: 14px; height: 14px; }
+  svg { display: inline-block; vertical-align: middle; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .hero-section { position: relative; min-height: 70vh; display: flex; align-items: center; padding-top: 80px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .45; }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,10,10,.9) 40%, rgba(10,10,10,.5) 70%, rgba(10,10,10,.2)); }
+  @media(max-width:767px){ .hero-bg::after { background: linear-gradient(to bottom, rgba(10,10,10,.4) 0%, rgba(10,10,10,.85) 60%, rgba(10,10,10,.98) 100%) !important; } }
+  .hero-overlay-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to top, #0a0a0a, transparent); z-index: 1; }
+  .hero-content { position: relative; z-index: 2; padding: 4rem 2rem; }
+  @media(min-width:768px){ .hero-content { padding: 5rem 3rem; } }
+  .hero-tag { display: flex; align-items: center; gap: .75rem; margin-bottom: 1rem; }
+  .hero-tag .line { width: 2rem; height: 2px; background: var(--red); }
+  .hero-tag span { color: var(--red); font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .15em; }
+  .hero-h1 { font-size: clamp(2.5rem, 8vw, 5.5rem); font-weight: 900; line-height: .95; text-transform: uppercase; margin-bottom: 1.25rem; letter-spacing: -.02em; }
+  .hero-desc { color: var(--muted); font-size: 1.15rem; margin-bottom: 2rem; line-height: 1.6; max-width: 560px; }
+  .hero-desc strong { color: var(--red-light); }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .content-section { background: var(--bg2); }
+  .content-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; align-items: center; }
+  @media(min-width:900px){ .content-grid { grid-template-columns: 1fr 1fr; } }
+  .img-glow { position: relative; }
+  .img-glow::before { content: ''; position: absolute; inset: -1.5rem; background: rgba(229,62,62,.08); border-radius: 1.5rem; filter: blur(30px); }
+  .img-glow img { position: relative; width: 100%; border-radius: 1.25rem; border: 1px solid rgba(229,62,62,.2); box-shadow: 0 30px 60px rgba(0,0,0,.5); }
+  .extra-box { margin-top: 2rem; padding: 1.25rem 1.5rem; border-radius: 1rem; background: rgba(229,62,62,.08); border: 1px solid rgba(229,62,62,.2); color: var(--muted); font-size: .95rem; line-height: 1.6; }
+  .extra-box strong { color: var(--red-light); }
+  #chat-btn { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999; width: 56px; height: 56px; border-radius: 50%; background: var(--red); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(229,62,62,.5); animation: pulse-red 2.5s ease-in-out infinite; }
+  #chat-btn svg { width: 26px; height: 26px; color: #fff; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner max-w">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-text">
+        <span class="name text-red">BJ Diesel</span>
+        <span class="sub">Gas Mechanics &amp; Diagnostics</span>
+      </div>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="btn-outline" style="padding:.4rem .9rem;font-size:.8rem;">
+        <svg viewBox="0 0 24 24" width="14" height="14"><polyline points="15 18 9 12 15 6"/></svg>
+        Inicio
+      </a>
+      <a href="tel:+16619331206" class="nav-tel">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="nav-tel-num">(661) 933-1206</span>
+        <span class="nav-tel-short">Llamar</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-bg">
+    <img src="img8.jpg" alt="Frenos BJ Diesel Bakersfield"/>
+  </div>
+  <div class="hero-overlay-bottom"></div>
+  <div class="hero-content max-w px reveal visible">
+    <div class="hero-tag">
+      <div class="line"></div>
+      <span>Sistema de Frenos &bull; Bakersfield CA</span>
+    </div>
+    <h1 class="hero-h1">
+      <span class="text-red">Frenos</span>
+    </h1>
+    <p class="hero-desc">Reparación completa del sistema de frenos. Pastillas, discos, tambores, cilindros y líquido de frenos — todo lo que necesita tu vehículo para frenar seguro.</p>
+    <div class="hero-btns">
+      <a href="tel:+16619331206" class="btn-red">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Llamar Ahora
+      </a>
+      <a href="index.html#servicios" class="btn-outline">
+        Ver Todos los Servicios
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content-section" style="padding:6rem 0;">
+  <div class="max-w px">
+    <div class="content-grid">
+      <div class="reveal">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <p class="section-label" style="margin:0">Sistema de Frenos</p>
+        </div>
+        <h2 class="section-title"><span class="text-red">Frenos</span></h2>
+        <p class="section-desc">Reparación completa del sistema de frenos. Pastillas, discos, tambores, cilindros y líquido de frenos — todo lo que necesita tu vehículo para frenar seguro.</p>
+        <ul class="feature-list">
+          <li>Pastillas y discos</li>
+          <li>Tambores y zapatas</li>
+          <li>Cilindros de freno</li>
+          <li>Líquido de frenos</li>
+          <li>Freno de mano</li>
+        </ul>
+        <div class="extra-box"><strong>Nota:</strong> Los frenos son seguridad. Si escuchas chirrido o el pedal está duro, no esperes — llámanos hoy.</div>
+        <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;">
+          <a href="tel:+16619331206" class="btn-red">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Llamar Ahora
+          </a>
+          <a href="sms:+16619331206" class="btn-outline">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Mandar Texto
+          </a>
+        </div>
+      </div>
+      <div class="img-glow reveal reveal-delay-1">
+        <img src="img8.jpg" alt="Frenos" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section style="background:var(--bg);padding:5rem 0;">
+  <div class="max-w px">
+    <div class="reveal">
+      <p class="section-label">También ofrecemos</p>
+      <h2 class="section-title">Otros <span class="text-red">Servicios</span></h2>
+    </div>
+    <div class="related-grid">
+      
+      <a href="aceite.html" class="related-card reveal">
+        <div class="sc-bg" style="background-image:url('img1.jpg')"></div>
+        <div class="related-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div><h3>Cambio de Aceite</h3><p>Aceite convencional y sintético</p></div>
+        </div>
+      </a>
+      <a href="diesel.html" class="related-card reveal">
+        <div class="sc-bg" style="background-image:url('img2.jpg')"></div>
+        <div class="related-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div><h3>Motores Diesel</h3><p>Cat, Detroit, Cummins y más</p></div>
+        </div>
+      </a>
+      <a href="ecm.html" class="related-card reveal">
+        <div class="sc-bg" style="background-image:url('img3.jpg')"></div>
+        <div class="related-card-body">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div><h3>Diagnósticos E.C.M.</h3><p>Lectura y borrado de códigos DTC</p></div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <a href="index.html#servicios" class="btn-outline" style="font-size:1rem;">
+        Ver Todos los Servicios
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-bg"><img src="img8.jpg" alt=""/></div>
+  <div class="cta-content reveal">
+    <h2 class="cta-h2">¿Listo para <span class="text-red">Comenzar?</span></h2>
+    <p class="cta-p">Llámanos o manda un texto.<br><strong>Atendemos en Bakersfield y alrededores.</strong></p>
+    <a href="tel:+16619331206" class="cta-tel">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (661) 933-1206
+    </a>
+    <div class="cta-info">
+      <div class="cta-info-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        7675 S Union Ave, Bakersfield CA 93307
+      </div>
+      <div class="cta-info-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        BJdiesel76@gmail.com
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="name text-red">BJ Diesel Gas Mechanics &amp; Diagnostics</p>
+      <p class="addr">7675 S Union Ave, Bakersfield CA 93307</p>
+    </div>
+    <div class="footer-right">
+      <a href="tel:+16619331206">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (661) 933-1206
+      </a>
+      <a href="index.html">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Inicio
+      </a>
+      <span>&copy; 2025 BJ Diesel. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="chat-btn" onclick="window.location.href='tel:+16619331206'" aria-label="Llamar">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </svg>
+</button>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+reveals.forEach(el => { if (!el.classList.contains('visible')) observer.observe(el); });
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth' }); });
+});
+</script>
+</body>
+</html>
