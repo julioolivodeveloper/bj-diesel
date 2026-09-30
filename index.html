@@ -420,6 +420,26 @@
   .mobile-menu a:hover { background: rgba(229,62,62,.15); }
 
   svg { display: inline-block; vertical-align: middle; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ── CONTACT MODAL ── */
+  .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:999;display:none;align-items:center;justify-content:center;backdrop-filter:blur(6px);padding:1rem}
+  .modal-backdrop.open{display:flex}
+  .modal{background:#111;border:1px solid rgba(229,62,62,.25);border-radius:1.5rem;padding:2.5rem 2rem;max-width:380px;width:100%;text-align:center;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.7);animation:modal-in .25s ease}
+  @keyframes modal-in{from{opacity:0;transform:scale(.92) translateY(20px)}to{opacity:1;transform:none}}
+  .modal-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.08);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:background .2s}
+  .modal-close:hover{background:rgba(229,62,62,.25)}
+  .modal-icon{width:64px;height:64px;border-radius:50%;background:rgba(229,62,62,.15);border:2px solid rgba(229,62,62,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+  .modal-icon svg{width:28px;height:28px;color:var(--red-light)}
+  .modal h3{font-size:1.4rem;font-weight:900;margin-bottom:.5rem}
+  .modal p{color:var(--muted);font-size:.92rem;line-height:1.55;margin-bottom:2rem}
+  .modal-btns{display:flex;flex-direction:column;gap:.85rem}
+  .modal-btn-call{display:flex;align-items:center;justify-content:center;gap:.75rem;background:var(--red);color:#fff;border:none;border-radius:1rem;padding:1rem 1.5rem;font-size:1rem;font-weight:900;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;box-shadow:0 0 30px rgba(229,62,62,.35);animation:pulse-red 2.5s ease-in-out infinite}
+  .modal-btn-call:hover{background:var(--red-light);transform:scale(1.02)}
+  .modal-btn-call svg{width:20px;height:20px;flex-shrink:0;stroke:currentColor;fill:none}
+  .modal-btn-sms{display:flex;align-items:center;justify-content:center;gap:.75rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:1rem;padding:1rem 1.5rem;font-size:1rem;font-weight:700;cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s}
+  .modal-btn-sms:hover{border-color:rgba(229,62,62,.5);background:rgba(229,62,62,.1)}
+  .modal-btn-sms svg{width:20px;height:20px;flex-shrink:0;stroke:currentColor;fill:none}
+  .modal-note{margin-top:1.25rem;font-size:.78rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -523,10 +543,10 @@
       </div>
     </div>
     <div class="hero-btns">
-      <a href="tel:+16619331206" class="btn-red">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (661) 933-1206
-      </a>
+      <button class="btn-red" onclick="openContact()">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Contactar
+      </button>
       <a href="#servicios" class="btn-outline">
         <span data-t="hero.cta">Ver Servicios</span>
         <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
@@ -1334,6 +1354,41 @@ document.addEventListener('click', function(e) {
     if (m) m.classList.remove('open');
   }
 });
+</script>
+
+<!-- CONTACT MODAL -->
+<div class="modal-backdrop" id="contact-modal" onclick="if(event.target===this)closeContact()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeContact()">✕</button>
+    <div class="modal-icon">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </div>
+    <h3>¿Cómo prefieres<br/>contactarnos?</h3>
+    <p>Estamos disponibles para llamadas y mensajes de texto. Elige la opción que más te convenga.</p>
+    <div class="modal-btns">
+      <a href="tel:+16619331206" class="modal-btn-call">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Llamar — (661) 933-1206
+      </a>
+      <a href="sms:+16619331206" class="modal-btn-sms">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Enviar Texto — (661) 933-1206
+      </a>
+    </div>
+    <p class="modal-note">📍 7675 S Union Ave, Bakersfield CA 93307 · 🚐 Servicio a domicilio</p>
+  </div>
+</div>
+
+<script>
+function openContact() {
+  document.getElementById('contact-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeContact() {
+  document.getElementById('contact-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if(e.key==='Escape') closeContact(); });
 </script>
 </body>
 </html>
